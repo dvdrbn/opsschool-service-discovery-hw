@@ -1,0 +1,17 @@
+{
+    "service": {
+        "name": "webserver",
+        "id": "webserver",
+        "port": 80,
+        "checks": [
+            {
+                "name": "HTTP TCP on port 80",
+                "tcp": "localhost:80",
+                "interval": "30s",
+                "timeout": "5s",
+                "success_before_passing": 3,
+                "failures_before_critical": 3
+            }
+        ]
+    }
+}
